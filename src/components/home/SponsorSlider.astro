@@ -1,0 +1,40 @@
+---
+import "swiper/css/bundle";
+import SponsorSlide from "./SponsorSlide.astro";
+---
+
+<div class="swiper p-2.5! w-full">
+  <div class="swiper-wrapper">
+    <SponsorSlide />
+    <SponsorSlide />
+    <SponsorSlide />
+    <SponsorSlide />
+    <SponsorSlide />
+    <SponsorSlide />
+  </div>
+</div>
+<script>
+  import Swiper from "swiper";
+
+  const swiper = new Swiper(".swiper", {
+    grabCursor: true,
+    spaceBetween: 60,
+    breakpoints: {
+      1400: {
+        slidesPerView: 5,
+      },
+      1200: {
+        slidesPerView: 4,
+      },
+      992: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      576: {
+        slidesPerView: 1,
+      },
+    },
+  });
+</script>

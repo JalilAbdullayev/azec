@@ -1,0 +1,116 @@
+---
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import logo from "../../../public/logo-main-1.png";
+---
+
+<header
+  x-data="{isOpen: false, fixed: false}"
+  class="shadow bg-white"
+  x-bind:class="{ 'fixed top-0 left-0 right-0 z-50': fixed }"
+  @scroll.window="fixed = window.scrollY > 100"
+>
+  <nav class="flex justify-between items-center container py-7.5 lg:py-2.5">
+    <a href="/" class="w-42">
+      <Image src={logo} alt="logo" loading="eager" />
+    </a>
+    <div class="flex items-center max-lg:hidden">
+      <div class="relative group">
+        <button
+          type="button"
+          class="text-primary group-hover:text-secondary font-semibold py-6 px-4 transition-all cursor-pointer"
+        >
+          AEC
+        </button>
+        <div
+          class="absolute bg-white py-3.5 shadow rounded w-57.5 hidden group-hover:block transition-all -z-50 group-hover:z-10"
+        >
+          <a
+            href="#"
+            class="hover:bg-primary hover:text-white capitalize transition-all pt-3.5 pb-3 px-6.5 inline-block w-full font-medium text-sm"
+          >
+            Haqqımızda
+          </a>
+          <a
+            href="#"
+            class="hover:bg-primary hover:text-white capitalize transition-all pt-3.5 pb-3 px-6.5 inline-block w-full font-medium text-sm"
+          >
+            Müşahidə şurası
+          </a>
+        </div>
+      </div>
+      <a
+        href="#"
+        class="text-primary hover:text-secondary font-semibold py-6 px-4 transition-all"
+      >
+        Tədris
+      </a>
+    </div>
+    <button
+      type="button"
+      class="relative w-8 h-8 flex items-center justify-center lg:hidden"
+      @click="isOpen = !isOpen"
+    >
+      <Icon
+        name="fa7-solid:bars"
+        size="26"
+        class="absolute transition-all duration-300 ease-in-out"
+        x-bind:class="isOpen ? 'opacity-0 rotate-90 scale-0' : 'opacity-100 rotate-0 scale-100'"
+      />
+      <Icon
+        name="fa7-solid:xmark"
+        size="26"
+        class="absolute transition-all duration-300 ease-in-out"
+        x-bind:class="isOpen ? 'opacity-100 rotate-0 scale-100' : 'opacity-0 -rotate-90 scale-0'"
+      />
+    </button>
+  </nav>
+  <div x-show="isOpen" x-collapse class="bg-primary py-4 lg:hidden">
+    <div x-data="{isOpen: false}">
+      <button
+        type="button"
+        @click="isOpen = !isOpen"
+        class="text-white py-4 pe-9 ps-11 font-bold text-xl transition-all focus:text-tertiary active:text-tertiary capitalize flex items-center justify-between w-full relative"
+      >
+        AEC
+        <span
+          class="bg-primary size-12.5 flex justify-center items-center absolute top-2.5 right-3.5 rotate-45"
+        >
+          <Icon
+            name="tabler:plus"
+            size={21}
+            class="transition-all"
+            x-bind:class="isOpen ? 'rotate-0' : 'rotate-45'"
+          />
+        </span>
+      </button>
+      <div x-show="
+          isOpen" x-collapse class="bg-gray-100">
+        <a
+          href="#"
+          class="py-4 pe-9 ps-11 block text-sm font-medium capitalize"
+        >
+          Haqqımızda
+        </a>
+        <a
+          href="#"
+          class="py-4 pe-9 ps-11 block text-sm font-medium capitalize"
+        >
+          Müşahidə şurası
+        </a>
+        <a
+          href="#"
+          class="py-4 pe-9 ps-11 block text-sm font-medium capitalize"
+        >
+          Üzvlük
+        </a>
+      </div>
+    </div>
+    <a
+      href="#"
+      class="text-white py-4 pe-9 ps-11 font-bold text-xl transition-all focus:text-tertiary active:text-tertiary inline-block capitalize"
+    >
+      Tədris
+    </a>
+  </div>
+</header>

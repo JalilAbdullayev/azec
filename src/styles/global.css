@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-2xl: 1400px;
+
+  --font-sans: Montserrat, Arial, sans-serif;
+
+  --color-primary: #000a46;
+  --color-secondary: #00a3e0;
+  --color-tertiary: #a0dc64;
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply font-sans;
+}
+
+.container {
+  @apply mx-auto max-sm:px-4;
+}

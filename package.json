@@ -1,14 +1,28 @@
 {
   "name": "azec",
-  "type": "module",
   "version": "0.0.1",
+  "dependencies": {
+    "@alpinejs/collapse": "^3.14.9",
+    "@astrojs/alpinejs": "^0.4.8",
+    "@iconify-json/fa7-brands": "^1.2.0",
+    "@iconify-json/fa7-solid": "^1.2.0",
+    "@iconify-json/tabler": "^1.2.22",
+    "@tailwindcss/vite": "^4.1.12",
+    "alpinejs": "^3.14.9",
+    "astro": "^5.13.5",
+    "astro-icon": "^1.1.5",
+    "swiper": "^11.2.10",
+    "tailwindcss": "^4.1.12"
+  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
-  "dependencies": {
-    "astro": "^5.13.5"
+  "type": "module",
+  "devDependencies": {
+    "@types/alpinejs": "^3.13.11",
+    "@types/alpinejs__collapse": "^3.13.4"
   }
 }

@@ -1,0 +1,58 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import logo from "../../../public/logo-main-white-1.png";
+
+const year: string =
+  "2025" +
+  (new Date().getFullYear() !== 2025 ? " - " + new Date().getFullYear() : "");
+---
+
+<footer class="bg-primary">
+  <div
+    class="container flex items-center justify-center sm:justify-between py-7.5 flex-wrap max-sm:gap-7.5"
+  >
+    <div>
+      <a href="/" class="w-42 inline-block">
+        <Image src={logo} alt="Logo" loading="eager" />
+      </a>
+    </div>
+    <div class="flex items-center gap-2">
+      <a
+        href="#"
+        class="size-11 bg-white/10 rounded-full flex items-center justify-center hover:bg-secondary transition-all"
+      >
+        <Icon name="fa7-brands:instagram" size={16} class="text-white" />
+      </a>
+      <a
+        href="#"
+        class="size-11 bg-white/10 rounded-full flex items-center justify-center hover:bg-secondary transition-all"
+      >
+        <Icon name="fa7-brands:whatsapp" size={16} class="text-white" />
+      </a>
+      <a
+        href="#"
+        class="size-11 bg-white/10 rounded-full flex items-center justify-center hover:bg-secondary transition-all"
+      >
+        <Icon name="fa7-brands:facebook-f" size={16} class="text-white" />
+      </a>
+      <a
+        href="#"
+        class="size-11 bg-white/10 rounded-full flex items-center justify-center hover:bg-secondary transition-all"
+      >
+        <Icon name="fa7-brands:youtube" size={16} class="text-white" />
+      </a>
+    </div>
+  </div>
+  <hr class="h-px bg-white/10 border-0" />
+  <div class="py-7 container text-white/50 text-sm">
+    © {year} Bütün hüquqlar qorunur. Developed by
+    <a
+      href="https://arenda.az"
+      target="_blank"
+      class="hover:text-secondary hover:underline transition-all"
+    >
+      Arenda.az
+    </a>.
+  </div>
+</footer>
