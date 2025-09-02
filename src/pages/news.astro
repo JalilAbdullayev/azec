@@ -1,0 +1,17 @@
+---
+import Heading from "../components/Heading.astro";
+import NewsCard from "../components/NewsCard.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <Heading title="Xəbər & Elanlar" />
+  <section
+    class="pt-20 pb-12.5 grid md:grid-cols-2 lg:grid-cols-3 gap-7 container"
+  >
+    <NewsCard />
+    <NewsCard />
+    <NewsCard />
+    <NewsCard />
+  </section>
+</Layout>

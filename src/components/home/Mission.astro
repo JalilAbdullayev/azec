@@ -1,5 +1,9 @@
 ---
-const { number } = Astro.props;
+interface Props {
+  number: string;
+}
+
+const { number }: Props = Astro.props;
 ---
 
 <div class="swiper-slide">

@@ -1,0 +1,31 @@
+---
+import { Image } from "astro:assets";
+import img from "../../../public/azec202402-350x204.jpg";
+---
+
+<article>
+  <a href="#" class="rounded-tr-3xl rounded-bl-3xl relative group">
+    <Image src={img} alt="" class="rounded-tr-3xl rounded-bl-3xl w-full" />
+    <div
+      class="bg-primary text-white text-sm font-bold py-1 px-4 rounded-3xl absolute inset-x-1/2 -translate-x-1/2 -bottom-4 w-fit text-nowrap z-2"
+    >
+      1 İyun
+    </div>
+    <div
+      class="absolute inset-0 bg-primary rounded-tr-3xl rounded-bl-3xl text-lg font-bold text-white flex items-center justify-center opacity-0 group-hover:opacity-80 transition-all"
+    >
+      Ətraflı
+    </div>
+  </a>
+  <div class="pt-7.5 px-2.5 pb-2.5 flex flex-col gap-4">
+    <a
+      href="#"
+      class="text-primary hover:text-secondary transition-all text-2xl font-medium text-center block"
+    >
+      Ümumi foto qalereya
+    </a>
+    <a href="#" class="text-neutral-500 text-center text-sm font-medium block">
+      Foto
+    </a>
+  </div>
+</article>

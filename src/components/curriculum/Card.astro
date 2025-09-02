@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets";
+import img from "../../../public/2147767667-e1742601915275-1024x731.jpg";
+import { Icon } from "astro-icon/components";
+---
+
+<article class="rounded shadow">
+  <a href="#">
+    <Image src={img} alt="" class="rounded-t" />
+  </a>
+  <div class="p-5 flex flex-col gap-5 items-start">
+    <a
+      href="#"
+      class="text-primary text-lg font-bold hover:text-tertiary transition-all"
+    >
+      Azərbaycan-Türkiyə tiroid/paratiroid xəstəlikləri davamlı təlim proqramı
+    </a>
+    <a
+      href="#"
+      class="py-4 px-6 flex items-center bg-secondary text-white text-base rounded-[50px] gap-7.5 hover:bg-tertiary transition-all"
+    >
+      Ətraflı <Icon name="tabler:arrow-up-right" size={30} />
+    </a>
+  </div>
+</article>
