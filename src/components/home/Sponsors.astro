@@ -1,14 +1,47 @@
 ---
 import { Image } from "astro:assets";
-import SponsorSlider from "./SponsorSlider.astro";
+import SponsorSlide from "./SponsorSlide.astro";
+import "swiper/css/bundle";
 ---
 
-<section class="pt-6 pb-20 container flex flex-col gap-6">
-  <div class="flex flex-col gap-6 pt-5 pb-2.5 px-2.5">
-    <div class="flex flex-col gap-6 p-2.5">
+<section class="py-20 container flex flex-col gap-6">
+  <div class="flex flex-col gap-6">
+    <div class="flex flex-col gap-6">
       <h2 class="text-primary text-4xl font-bold">Tərəfdaşlar</h2>
-      <hr class="h-1.5 w-9 border-0 bg-tertiary" />
+      <hr class="h-1.5 w-9 border-0 bg-tertiary rounded" />
     </div>
-    <SponsorSlider />
+    <div id="sponsor-swiper" class="overflow-hidden mt-5">
+      <div class="swiper-wrapper">
+        <SponsorSlide />
+        <SponsorSlide />
+        <SponsorSlide />
+        <SponsorSlide />
+        <SponsorSlide />
+        <SponsorSlide />
+      </div>
+    </div>
   </div>
 </section>
+
+<script>
+  import Swiper from "swiper";
+
+  new Swiper("#sponsor-swiper", {
+    grabCursor: true,
+    spaceBetween: 60,
+    breakpoints: {
+      1200: {
+        slidesPerView: 4,
+      },
+      992: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      576: {
+        slidesPerView: 1,
+      },
+    },
+  });
+</script>

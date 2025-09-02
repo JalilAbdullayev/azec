@@ -6,8 +6,7 @@
       "dependencies": {
         "@alpinejs/collapse": "^3.14.9",
         "@astrojs/alpinejs": "^0.4.8",
-        "@iconify-json/fa7-brands": "^1.2.0",
-        "@iconify-json/fa7-solid": "^1.2.0",
+        "@iconify-json/bytesize": "^1.2.2",
         "@iconify-json/tabler": "^1.2.22",
         "@tailwindcss/vite": "^4.1.12",
         "alpinejs": "^3.14.9",
@@ -105,9 +104,7 @@
 
     "@esbuild/win32-x64": ["@esbuild/win32-x64@0.25.9", "", { "os": "win32", "cpu": "x64" }, "sha512-PPOl1mi6lpLNQxnGoyAfschAodRFYXJ+9fs6WHXz7CSWKbOqiMZsubC+BQsVKuul+3vKLuwTHsS2c2y9EoKwxQ=="],
 
-    "@iconify-json/fa7-brands": ["@iconify-json/fa7-brands@1.2.0", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-OTdHSwRmycgQQXQr7wJQFyD08zj4OxoRfaWhCuI3a9MhbnHJApU4U2Qbp6hP4zicqOmQB9UII9+MA1IDNNLPlQ=="],
-
-    "@iconify-json/fa7-solid": ["@iconify-json/fa7-solid@1.2.0", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-J4qHWO94sv4RQgkyy4eMFO2NjPsMg6cDqmJPNHLTO0ChVkeg54hIPUAQp0I42cGotHaXix4kYY8sDQCXggC+nA=="],
+    "@iconify-json/bytesize": ["@iconify-json/bytesize@1.2.2", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-lI/wtPosh84caAS+UcudpeKiQk9ShfVoeaUTtzgOOBUhwQvjDuSiiHqe84v5NluHuIIFW64Fa3kuoGoluxWgpA=="],
 
     "@iconify-json/tabler": ["@iconify-json/tabler@1.2.22", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-KmCtTzZyz7dtszdQGJ5wbWqko6exhI38e4aCQqWZE1Z2wGUqBsMXrRWawXkAp6/XNBebt54h0lcxFCaTYBwFJg=="],
 

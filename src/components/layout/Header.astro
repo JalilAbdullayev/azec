@@ -40,7 +40,7 @@ import logo from "../../../public/logo-main-1.png";
         </div>
       </div>
       <a
-        href="#"
+        href="/curriculum"
         class="text-primary hover:text-secondary font-semibold py-6 px-4 transition-all"
       >
         Tədris
@@ -51,18 +51,14 @@ import logo from "../../../public/logo-main-1.png";
       class="relative w-8 h-8 flex items-center justify-center lg:hidden"
       @click="isOpen = !isOpen"
     >
-      <Icon
-        name="fa7-solid:bars"
-        size="26"
-        class="absolute transition-all duration-300 ease-in-out"
+      <i
+        class="fa-solid fa-bars absolute transition-all duration-300 ease-in-out text-2xl"
         x-bind:class="isOpen ? 'opacity-0 rotate-90 scale-0' : 'opacity-100 rotate-0 scale-100'"
-      />
-      <Icon
-        name="fa7-solid:xmark"
-        size="26"
-        class="absolute transition-all duration-300 ease-in-out"
+      ></i>
+      <i
+        class="fa-solid fa-xmark absolute transition-all duration-300 ease-in-out text-2xl"
         x-bind:class="isOpen ? 'opacity-100 rotate-0 scale-100' : 'opacity-0 -rotate-90 scale-0'"
-      />
+      ></i>
     </button>
   </nav>
   <div x-show="isOpen" x-collapse class="bg-primary py-4 lg:hidden">

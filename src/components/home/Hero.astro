@@ -1,0 +1,31 @@
+---
+import { Icon } from "astro-icon/components";
+import HeroSlide from "./HeroSlide.astro";
+---
+
+<section class="h-137.5 md:h-162.5 lg:h-212.5 overflow-hidden" id="hero-swiper">
+  <div class="swiper-wrapper">
+    <HeroSlide />
+    <HeroSlide />
+  </div>
+  <button type="button" class="swiper-button-prev after:hidden">
+    <i class="fa-solid fa-angle-left text-2xl text-zinc-100/90"></i>
+  </button>
+  <button type="button" class="swiper-button-next after:hidden">
+    <i class="fa-solid fa-angle-right text-2xl text-zinc-100/90"></i>
+  </button>
+</section>
+<script>
+  import Swiper from "swiper";
+  import { Navigation } from "swiper/modules";
+
+  new Swiper("#hero-swiper", {
+    grabCursor: true,
+    loop: true,
+    modules: [Navigation],
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>

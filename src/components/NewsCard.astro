@@ -1,0 +1,39 @@
+---
+import { Image } from "astro:assets";
+import img from "../../public/istockphoto-690203164-612x612-1-350x250.jpg";
+import { Icon } from "astro-icon/components";
+---
+
+<article class="rounded shadow lg:nth-4:hidden">
+  <a href="#" class="aspect-video w-full block relative group">
+    <Image src={img} alt="" class="object-cover size-full rounded-t" />
+    <div
+      class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 transition-all group-hover:opacity-100"
+    >
+      <Icon name="bytesize:plus" class="text-white" size={30} />
+    </div>
+  </a>
+  <div class="p-5 flex flex-col gap-4">
+    <a
+      href="#"
+      class="text-primary hover:text-tertiary transition-all font-bold text-lg"
+    >
+      Ölkəmizdə 1-ci Azərbaycan-Türkiyə Diabet Günləri keçiriləcək
+    </a>
+    <div class="flex items-center justify-between">
+      <span class="flex items-center gap-2 text-sm font-medium">
+        <i class="fa-solid fa-clock text-tertiary text-base"></i> 23 İyul 2025
+      </span>
+      <a
+        href="#"
+        class="flex items-center gap-2 text-sm font-medium text-primary"
+      >
+        Ətraflı <div
+          class="bg-tertiary rounded-full size-5 flex items-center justify-center"
+        >
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </div>
+      </a>
+    </div>
+  </div>
+</article>
