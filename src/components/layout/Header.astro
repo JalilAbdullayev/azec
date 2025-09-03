@@ -6,7 +6,8 @@ import logo from "../../../public/logo-main-1.png";
 
 <header
   x-data="{isOpen: false, fixed: false}"
-  class="shadow bg-white"
+  x-init="fixed = window.scrollY > 100"
+  class="shadow-md bg-white"
   x-bind:class="{ 'fixed top-0 left-0 right-0 z-50': fixed }"
   @scroll.window="fixed = window.scrollY > 100"
 >
@@ -26,7 +27,7 @@ import logo from "../../../public/logo-main-1.png";
           class="absolute bg-white py-3.5 shadow rounded w-57.5 hidden group-hover:block transition-all -z-50 group-hover:z-10"
         >
           <a
-            href="#"
+            href="/about"
             class="hover:bg-primary hover:text-white capitalize transition-all pt-3.5 pb-3 px-6.5 inline-block w-full font-medium text-sm"
           >
             Haqqımızda

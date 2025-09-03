@@ -1,13 +1,19 @@
 ---
-import { Icon } from "astro-icon/components";
 import Mission from "./Mission.astro";
+import "swiper/css/bundle";
+
+interface Props {
+  className?: string;
+}
+
+const { className }: Props = Astro.props;
 ---
 
-<section class="py-20 bg-neutral-100">
+<section class={"py-20 " + className}>
   <div class="container flex flex-col gap-6">
     <div class="flex flex-col gap-6">
       <div class="flex flex-col gap-6">
-        <h2 class="text-primary text-4xl font-bold">Misiya & Hədəflərimiz</h2>
+        <h2 class="text-primary text-4xl font-bold">Missiya & Hədəflərimiz</h2>
         <hr class="h-1.5 w-9 border-0 bg-tertiary rounded" />
       </div>
     </div>

@@ -2,7 +2,7 @@
   "lockfileVersion": 1,
   "workspaces": {
     "": {
-      "name": "azec",
+      "name": "apc",
       "dependencies": {
         "@alpinejs/collapse": "^3.14.9",
         "@astrojs/alpinejs": "^0.4.8",
