@@ -1,0 +1,20 @@
+---
+import Heading from "../components/Heading.astro";
+import Layout from "../layouts/Layout.astro";
+import Info from "../components/contact/Info.astro";
+import Form from "../components/contact/Form.astro";
+---
+
+<Layout>
+  <Heading title="Əlaqə" />
+  <section class="grid md:grid-cols-2 gap-6 py-20 container">
+    <Info />
+    <Form />
+  </section>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4291.890813846965!2d49.861086076866194!3d40.41003005604562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d4600664c97%3A0x3871b29144bdd1e!2sAynal%C4%B1%20Plaza!5e1!3m2!1sen!2saz!4v1756884409304!5m2!1sen!2saz"
+    class="w-full h-125"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"></iframe>
+</Layout>

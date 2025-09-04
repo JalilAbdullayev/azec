@@ -1,0 +1,167 @@
+---
+import Heading from "../components/Heading.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Qeydiyyat">
+  <Heading title="Qeydiyyat" />
+  <form
+    method="POST"
+    action=""
+    enctype="multipart/form-data"
+    class="py-20 container flex flex-col gap-7.5"
+  >
+    <div class="flex flex-col gap-6">
+      <h4 class="text-xl font-medium text-dark">Şəxsi məlumatlar</h4>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
+        <div class="flex flex-col">
+          <label for="first-name" class="text-base font-bold">Adınız</label>
+          <input
+            type="text"
+            id="first-name"
+            name="first-name"
+            required
+            maxlength="255"
+            class="text-sm bg-neutral-100 py-4 px-7 rounded outline-0 border-2 border-white focus:border-secondary focus:bg-white transition-all h-12 text-primary-dark"
+          />
+        </div>
+        <div class="flex flex-col">
+          <label for="last-name" class="text-base font-bold">Soyadınız</label>
+          <input
+            type="text"
+            id="last-name"
+            name="last-name"
+            required
+            maxlength="255"
+            class="text-sm bg-neutral-100 py-4 px-7 rounded outline-0 border-2 border-white focus:border-secondary focus:bg-white transition-all h-12 text-primary-dark"
+          />
+        </div>
+        <div class="flex flex-col">
+          <label for="id" class="text-base font-bold">Vəsiqə nömrəsi</label>
+          <input
+            type="text"
+            id="id"
+            name="id"
+            required
+            maxlength="255"
+            class="text-sm bg-neutral-100 py-4 px-7 rounded outline-0 border-2 border-white focus:border-secondary focus:bg-white transition-all h-12 text-primary-dark"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col gap-6">
+      <h4 class="text-xl font-medium text-dark">Əlaqə məlumatları</h4>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
+        <div class="flex flex-col">
+          <label for="phone" class="text-base font-bold">
+            Telefon nömrəniz
+          </label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+            maxlength="255"
+            class="text-sm bg-neutral-100 py-4 px-7 rounded outline-0 border-2 border-white focus:border-secondary focus:bg-white transition-all h-12 text-primary-dark"
+          />
+        </div>
+        <div class="flex flex-col">
+          <label for="email" class="text-base font-bold">E-mail</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            maxlength="255"
+            class="text-sm bg-neutral-100 py-4 px-7 rounded outline-0 border-2 border-white focus:border-secondary focus:bg-white transition-all h-12 text-primary-dark"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col gap-6">
+      <h4 class="text-xl font-medium text-dark">Peşəkar məlumatlar</h4>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
+        <div class="flex flex-col">
+          <label for="work" class="text-base font-bold"> İş yeriniz </label>
+          <input
+            type="text"
+            id="work"
+            name="work"
+            required
+            maxlength="255"
+            class="text-sm bg-neutral-100 py-4 px-7 rounded outline-0 border-2 border-white focus:border-secondary focus:bg-white transition-all h-12 text-primary-dark"
+          />
+        </div>
+        <div class="flex flex-col">
+          <label for="speciality" class="text-base font-bold">
+            İxtisasınız
+          </label>
+          <input
+            type="text"
+            id="speciality"
+            name="speciality"
+            required
+            maxlength="255"
+            class="text-sm bg-neutral-100 py-4 px-7 rounded outline-0 border-2 border-white focus:border-secondary focus:bg-white transition-all h-12 text-primary-dark"
+          />
+        </div>
+        <div class="flex flex-col">
+          <label for="speciality_file" class="text-base font-bold">
+            İxtisası təsdiq edən sənədin skanı
+          </label>
+          <input
+            type="file"
+            id="speciality_file"
+            name="speciality_file"
+            required
+            class="text-sm bg-neutral-100 py-4 px-7 rounded outline-0 border-2 border-white focus:border-secondary focus:bg-white transition-all h-12 text-primary-dark"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col gap-6">
+      <h4 class="text-xl font-medium text-dark">Ödəniş məlumatı</h4>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
+        <div class="flex flex-col lg:col-span-2 gap-2.5">
+          <h3 class="font-bold text-dark text-base">
+            AZƏRBAYCAN ENDOKRİNOLOQLAR CƏMİYYƏTİ İB
+          </h3>
+          <div class="text-base">
+            <strong class="font-bold">VÖEN:</strong> 1008472931
+          </div>
+          <div class="text-base">
+            <strong class="font-bold">Bank:</strong> ASC XALQ Bankı,Neftçilər filialı
+          </div>
+          <div class="text-base">
+            <strong class="font-bold">Kodu:</strong> 503756
+          </div>
+          <div class="text-base">
+            <strong class="font-bold">Hesab nömrəsi:</strong> AZ96HAJCNCRAZN01010369833001
+          </div>
+          <div class="text-base">
+            <strong class="font-bold">Müştəri kodu:</strong> 10369833
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <label for="check" class="text-base font-bold">
+            Ödəniş çeki və ya qaiməsi
+          </label>
+          <input
+            type="file"
+            id="check"
+            name="check"
+            required
+            class="text-sm bg-neutral-100 py-4 px-7 rounded outline-0 border-2 border-white focus:border-secondary focus:bg-white transition-all h-12 text-primary-dark"
+          />
+        </div>
+      </div>
+    </div>
+
+    <button
+      type="submit"
+      class="bg-secondary text-white py-2.5 px-6 rounded-[50px] w-fit cursor-pointer hover:bg-primary transition-all text-sm mx-auto"
+    >
+      Göndər <i class="fa-solid fa-arrow-right"></i>
+    </button>
+  </form>
+</Layout>

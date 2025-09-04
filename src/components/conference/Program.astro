@@ -1,0 +1,88 @@
+<section class="py-20 container flex flex-col gap-5">
+  <div class="flex flex-col items-center gap-6">
+    <h2 class="text-primary text-4xl font-bold">Proqram</h2>
+    <hr class="bg-tertiary w-9 h-1.5 border-0 rounded" />
+  </div>
+  <div x-data="{activeTab: 'tab1'}" class="flex flex-col gap-7.5">
+    <div class="flex items-center mx-auto bg-secondary w-fit rounded">
+      <button
+        type="button"
+        class="text-base font-semibold text-white py-4 px-7 transition-all first:rounded-l last:rounded-r cursor-pointer"
+        @click="activeTab = 'tab1'"
+        x-bind:class="{'bg-primary': activeTab === 'tab1'}"
+      >
+        24 may / Cümə
+      </button>
+      <button
+        type="button"
+        class="text-base font-semibold text-white py-4 px-7 transition-all first:rounded-l last:rounded-r cursor-pointer"
+        @click="activeTab = 'tab2'"
+        x-bind:class="{'bg-primary': activeTab === 'tab2'}"
+      >
+        25 may / Şənbə
+      </button>
+    </div>
+    <div x-show="activeTab === 'tab1'">
+      <div
+        class="flex max-md:flex-col max-md:gap-5 not-first:border-t not-first:pt-4 not-first:mt-4 border-neutral-200"
+      >
+        <div class="w-1/5 text-base text-secondary">15:00 – 16:00</div>
+        <div class="w-4/5 text-base">Açılış</div>
+      </div>
+      <div
+        class="flex max-md:flex-col max-md:gap-5 not-first:border-t not-first:pt-4 not-first:mt-4 border-neutral-200"
+      >
+        <div class="w-1/5 text-base text-secondary">15:00 – 16:00</div>
+        <div class="w-4/5 text-base">
+          Hipofiz Paneli
+          <strong>Moderatorlar:</strong> Nərmin İsmayılova, Tamfira Əliyeva <br
+          />
+          <strong>
+            Tip 2 Diabet müalicəsində qeyri insulin dərmanlar. Yeni nəsil
+            dərmanlar köhnələri unutdururmu?
+          </strong> İlhan Satman <br />
+        </div>
+      </div>
+    </div>
+    <div x-show="activeTab === 'tab2'">
+      <div
+        class="flex max-md:flex-col max-md:gap-5 not-first:border-t not-first:pt-4 not-first:mt-4 border-neutral-200"
+      >
+        <div class="w-1/5 text-base text-secondary">15:00 – 16:00</div>
+        <div class="w-4/5 text-base">
+          <strong> Tiroid 1 panel </strong>
+          <br />
+          <strong> Moderatorlar: </strong>
+          Mehtap Çakır, Fəridə Yaqubova
+          <br />
+          <strong>
+            Hamiləlik planlayanlarda və hamilələrdə tiroid xəstəlikləri
+          </strong>
+          Nurdan Gül
+          <br />
+          <strong> Hipotireoidizm. Kimi, necə müalicə edək? </strong>
+          Səbinə Paşayeva
+          <br />
+          <strong>
+            Hipertireoidizm. Laboratoriyadan klinikaya addım-addım
+          </strong>
+          Zülfü Cabbarov
+        </div>
+      </div>
+      <div
+        class="flex max-md:flex-col max-md:gap-5 not-first:border-t not-first:pt-4 not-first:mt-4 border-neutral-200"
+      >
+        <div class="w-1/5 text-base text-secondary">15:00 – 16:00</div>
+        <div class="w-4/5 text-base">
+          Hipofiz Paneli
+          <strong>Moderatorlar:</strong> Nərmin İsmayılova, Tamfira Əliyeva <br
+          />
+          <strong>
+            Tip 2 Diabet müalicəsində qeyri insulin dərmanlar. Yeni nəsil
+            dərmanlar köhnələri unutdururmu?
+          </strong> İlhan Satman <br />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

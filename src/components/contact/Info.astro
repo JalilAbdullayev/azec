@@ -1,0 +1,35 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<div class="flex flex-col gap-10">
+  <div class="text-base text-dark">
+    Sizi maraqlandıran istənilən sualla bağlı aşağıdakı əlaqə formalarından
+    istifadə edərək bizimlə əlaqə saxlaya bilərsiniz.
+  </div>
+  <hr class="bg-primary rounded border-0 h-1.5" />
+  <div class="flex flex-col gap-5">
+    <h6 class="font-bold text-primary text-base">Əlaqə məlumatları</h6>
+    <div class="flex flex-col gap-2.5">
+      <div class="flex items-center text-sm text-dark gap-2.5">
+        <Icon
+          name="material-symbols:location-on-outline"
+          class="text-lg text-primary"
+        /> Bakı, Azərbaycan
+      </div>
+      <a
+        href="mailto:info@azec.org.az"
+        class="flex items-center text-sm text-dark gap-2.5"
+      >
+        <i class="fa-regular fa-envelope text-lg text-primary"></i> info@azec.org.az
+      </a>
+      <a
+        href="tel:+994120000000"
+        class="flex items-center text-sm text-dark gap-2.5"
+      >
+        <Icon name="solar:phone-outline" class="text-lg text-primary" /> +994 12
+        0000000
+      </a>
+    </div>
+  </div>
+</div>

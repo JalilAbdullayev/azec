@@ -1,0 +1,20 @@
+---
+import { Image } from "astro:assets";
+import bg from "../../../public/6783_towfiqubarbhuiyaj6g_szotmf4unsplash_942659-qo9qw4p6bisndqfj0jesisswzf7fshepzyqd6fcy5w.jpg";
+import { Icon } from "astro-icon/components";
+---
+
+<div
+  class="relative rounded overflow-hidden group before:absolute before:inset-0 before:bg-black/40 before:opacity-0 hover:before:opacity-100 before:transition-all before:duration-400 before:pointer-events-none duration-400"
+>
+  <a href={bg.src} data-download-src={bg.src} data-fancybox="gallery">
+    <Image src={bg} alt="" class="size-full rounded" />
+  </a>
+  <a
+    href={bg.src}
+    download
+    class="bg-black hover:bg-white transition-all size-9.5 flex items-center justify-center absolute -bottom-9.5 group-hover:bottom-2 end-2 rounded text-white hover:text-black z-10 duration-400"
+  >
+    <Icon name="material-symbols:download-2" />
+  </a>
+</div>

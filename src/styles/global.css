@@ -10,6 +10,7 @@
   --font-sans: Montserrat, Arial, sans-serif;
 
   --color-primary: #000a46;
+  --color-primary-dark: #243238;
   --color-secondary: #00a3e0;
   --color-tertiary: #a0dc64;
   --color-tertiary-light: #d9f1c1;
@@ -24,6 +25,10 @@ html {
 
 body {
   @apply font-sans;
+}
+
+p {
+  @apply mb-2.5;
 }
 
 .container {

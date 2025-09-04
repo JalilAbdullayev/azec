@@ -1,0 +1,34 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<article
+  class="flip-card bg-transparent perspective-distant h-70 group"
+  x-data="{flipped: false}"
+  @click="flipped = !flipped"
+>
+  <div
+    class="relative size-full text-center transform-3d transition-all duration-600 group-hover:rotate-x-180"
+    :class="flipped ? 'rotate-x-180' : ''"
+  >
+    <div
+      class="border border-primary rounded p-9 flex flex-col gap-6 absolute backface-hidden size-full"
+    >
+      <Icon name="fa-solid:file-pdf" size={50} class="text-primary mx-auto" />
+      <h3 class="text-primary font-semibold text-xl text-center">
+        Endokrin Aciller
+      </h3>
+      <div class="text-dark text-sm text-center">12 may 2024</div>
+    </div>
+    <div
+      class="absolute size-full backface-hidden rotate-x-180 p-9 bg-primary rounded flex items-center justify-center"
+    >
+      <a
+        href="#"
+        class="border-2 border-white py-4 px-7 text-base transition-all hover:bg-white text-white hover:text-primary rounded-[100px]"
+      >
+        Yüklə
+      </a>
+    </div>
+  </div>
+</article>

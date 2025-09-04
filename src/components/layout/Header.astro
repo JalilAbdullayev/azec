@@ -1,7 +1,6 @@
 ---
-import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
-import logo from "../../../public/logo-main-1.png";
+import logo from "../../../public/logo-2.jpeg";
 ---
 
 <header
@@ -11,7 +10,9 @@ import logo from "../../../public/logo-main-1.png";
   x-bind:class="{ 'fixed top-0 left-0 right-0 z-50': fixed }"
   @scroll.window="fixed = window.scrollY > 100"
 >
-  <nav class="flex justify-between items-center container py-7.5 lg:py-2.5">
+  <nav
+    class="flex justify-between items-center container py-7.5 lg:py-2.5 max-lg:mx-0! max-lg:pe-9 max-lg:ps-11 max-lg:min-w-full!"
+  >
     <a href="/" class="w-42">
       <Image src={logo} alt="logo" />
     </a>
@@ -19,7 +20,7 @@ import logo from "../../../public/logo-main-1.png";
       <div class="relative group">
         <button
           type="button"
-          class="text-primary group-hover:text-secondary font-semibold py-6 px-4 transition-all cursor-pointer"
+          class="text-primary group-hover:text-secondary font-semibold py-6 px-4 transition-all cursor-pointer text-base"
         >
           AEC
         </button>
@@ -39,23 +40,77 @@ import logo from "../../../public/logo-main-1.png";
             Müşahidə şurası
           </a>
           <a
-            href="#"
+            href="/membership"
             class="hover:bg-primary hover:text-white capitalize transition-all pt-3.5 pb-3 px-6.5 inline-block w-full font-medium text-sm"
           >
             Üzvlük
           </a>
         </div>
       </div>
+      <div class="relative group">
+        <button
+          type="button"
+          class="text-primary group-hover:text-secondary font-semibold py-6 px-4 transition-all cursor-pointer text-base"
+        >
+          Fəaliyyət
+        </button>
+        <div
+          class="absolute bg-white py-3.5 shadow rounded w-57.5 hidden group-hover:block transition-all -z-50 group-hover:z-10"
+        >
+          <a
+            href="/conferences"
+            class="hover:bg-primary hover:text-white capitalize transition-all pt-3.5 pb-3 px-6.5 inline-block w-full font-medium text-sm"
+          >
+            Konfrans və tədbirlər
+          </a>
+          <a
+            href="#"
+            class="hover:bg-primary hover:text-white capitalize transition-all pt-3.5 pb-3 px-6.5 inline-block w-full font-medium text-sm"
+          >
+            İşçi qruplar
+          </a>
+        </div>
+      </div>
       <a
         href="/curriculum"
-        class="text-primary hover:text-secondary font-semibold py-6 px-4 transition-all"
+        class="text-primary hover:text-secondary font-semibold py-6 px-4 transition-all text-base"
       >
         Tədris
       </a>
       <div class="relative group">
         <button
           type="button"
-          class="text-primary group-hover:text-secondary font-semibold py-6 px-4 transition-all cursor-pointer"
+          class="text-primary group-hover:text-secondary font-semibold py-6 px-4 transition-all cursor-pointer text-base"
+        >
+          Nəşrlər
+        </button>
+        <div
+          class="absolute bg-white py-3.5 shadow rounded w-57.5 hidden group-hover:block transition-all -z-50 group-hover:z-10"
+        >
+          <a
+            href="/press"
+            class="hover:bg-primary hover:text-white capitalize transition-all pt-3.5 pb-3 px-6.5 inline-block w-full font-medium text-sm"
+          >
+            Bülletenlər
+          </a>
+          <a
+            href="/press"
+            class="hover:bg-primary hover:text-white capitalize transition-all pt-3.5 pb-3 px-6.5 inline-block w-full font-medium text-sm"
+          >
+            Kitablar
+          </a>
+          <a
+            href="/press"
+            class="hover:bg-primary hover:text-white capitalize transition-all pt-3.5 pb-3 px-6.5 inline-block w-full font-medium text-sm"
+          >
+            Bələdçilər
+          </a>
+        </div>
+      </div>
+      <div class="relative group">
+        <button
+          type="button"
+          class="text-primary group-hover:text-secondary font-semibold py-6 px-4 transition-all cursor-pointer text-base"
         >
           Media
         </button>
@@ -84,9 +139,15 @@ import logo from "../../../public/logo-main-1.png";
       </div>
       <a
         href="/contact"
-        class="text-primary hover:text-secondary font-semibold py-6 px-4 transition-all"
+        class="text-primary hover:text-secondary font-semibold py-6 px-4 transition-all text-base"
       >
         Əlaqə
+      </a>
+      <a
+        href="/register"
+        class="text-white bg-primary hover:bg-secondary py-2.5 px-6 transition-all rounded-[50px] text-sm ms-7"
+      >
+        Üzv ol
       </a>
     </div>
     <button
@@ -115,42 +176,107 @@ import logo from "../../../public/logo-main-1.png";
         <span
           class="bg-primary size-12.5 flex justify-center items-center absolute top-2.5 right-3.5 rotate-45"
         >
-          <Icon
-            name="tabler:plus"
-            size={21}
-            class="transition-all"
-            x-bind:class="isOpen ? 'rotate-0' : 'rotate-45'"
-          />
+          <i
+            class="fa-solid fa-plus transition-all"
+            x-bind:class="isOpen ? 'rotate-0' : 'rotate-45'"></i>
         </span>
       </button>
       <div x-show="
           isOpen" x-collapse class="bg-gray-100">
         <a
           href="/about"
-          class="py-4 pe-9 ps-11 block text-sm font-medium capitalize"
+          class="py-4 pe-9 ps-11 block text-sm font-medium capitalize w-full"
         >
           Haqqımızda
         </a>
         <a
           href="#"
-          class="py-4 pe-9 ps-11 block text-sm font-medium capitalize"
+          class="py-4 pe-9 ps-11 block text-sm font-medium capitalize w-full"
         >
           Müşahidə şurası
         </a>
         <a
-          href="#"
-          class="py-4 pe-9 ps-11 block text-sm font-medium capitalize"
+          href="/membership"
+          class="py-4 pe-9 ps-11 block text-sm font-medium capitalize w-full"
         >
           Üzvlük
         </a>
       </div>
     </div>
+    <div x-data="{isOpen: false}">
+      <button
+        type="button"
+        @click="isOpen = !isOpen"
+        class="text-white py-4 pe-9 ps-11 font-bold text-xl transition-all focus:text-tertiary active:text-tertiary capitalize flex items-center justify-between w-full relative"
+      >
+        Fəaliyyət
+        <span
+          class="bg-primary size-12.5 flex justify-center items-center absolute top-2.5 right-3.5 rotate-45"
+        >
+          <i
+            class="fa-solid fa-plus transition-all"
+            x-bind:class="isOpen ? 'rotate-0' : 'rotate-45'"></i>
+        </span>
+      </button>
+      <div x-show="
+          isOpen" x-collapse class="bg-gray-100">
+        <a
+          href="/about"
+          class="py-4 pe-9 ps-11 block text-sm font-medium capitalize w-full"
+        >
+          Konfranslar və tədbirlər
+        </a>
+        <a
+          href="#"
+          class="py-4 pe-9 ps-11 block text-sm font-medium capitalize w-full"
+        >
+          İşçi qruplar
+        </a>
+      </div>
+    </div>
     <a
       href="/curriculum"
-      class="text-white py-4 pe-9 ps-11 font-bold text-xl transition-all focus:text-tertiary active:text-tertiary inline-block capitalize"
+      class="text-white py-4 pe-9 ps-11 font-bold text-xl transition-all focus:text-tertiary active:text-tertiary inline-block capitalize w-full"
     >
       Tədris
     </a>
+    <div x-data="{isOpen: false}">
+      <button
+        type="button"
+        @click="isOpen = !isOpen"
+        class="text-white py-4 pe-9 ps-11 font-bold text-xl transition-all focus:text-tertiary active:text-tertiary capitalize flex items-center justify-between w-full relative"
+      >
+        Nəşrlər
+        <span
+          class="bg-primary size-12.5 flex justify-center items-center absolute top-2.5 right-3.5 rotate-45"
+        >
+          <i
+            class="fa-solid fa-plus transition-all"
+            x-bind:class="isOpen ? 'rotate-0' : 'rotate-45'"></i>
+        </span>
+      </button>
+      <div x-show="
+          isOpen" x-collapse class="bg-gray-100">
+        <a
+          href="/press"
+          class="py-4 pe-9 ps-11 block text-sm font-medium capitalize w-full"
+        >
+          Bülletenlər
+        </a>
+        <a
+          href="/press"
+          class="py-4 pe-9 ps-11 block text-sm font-medium capitalize w-full"
+        >
+          Kitablar
+        </a>
+        <a
+          href="/press"
+          class="py-4 pe-9 ps-11 block text-sm font-medium capitalize w-full"
+        >
+          Bələdçilər
+        </a>
+      </div>
+    </div>
     <div x-data="{isOpen: false}">
       <button
         type="button"
@@ -161,31 +287,28 @@ import logo from "../../../public/logo-main-1.png";
         <span
           class="bg-primary size-12.5 flex justify-center items-center absolute top-2.5 right-3.5 rotate-45"
         >
-          <Icon
-            name="tabler:plus"
-            size={21}
-            class="transition-all"
-            x-bind:class="isOpen ? 'rotate-0' : 'rotate-45'"
-          />
+          <i
+            class="fa-solid fa-plus transition-all"
+            x-bind:class="isOpen ? 'rotate-0' : 'rotate-45'"></i>
         </span>
       </button>
       <div x-show="
           isOpen" x-collapse class="bg-gray-100">
         <a
           href="/news"
-          class="py-4 pe-9 ps-11 block text-sm font-medium capitalize"
+          class="py-4 pe-9 ps-11 block text-sm font-medium capitalize w-full"
         >
           Xəbərlər
         </a>
         <a
           href="/multimedia"
-          class="py-4 pe-9 ps-11 block text-sm font-medium capitalize"
+          class="py-4 pe-9 ps-11 block text-sm font-medium capitalize w-full"
         >
           Multimedia
         </a>
         <a
           href="/blog"
-          class="py-4 pe-9 ps-11 block text-sm font-medium capitalize"
+          class="py-4 pe-9 ps-11 block text-sm font-medium capitalize w-full"
         >
           Bloq
         </a>
@@ -193,7 +316,7 @@ import logo from "../../../public/logo-main-1.png";
     </div>
     <a
       href="/contact"
-      class="text-white py-4 pe-9 ps-11 font-bold text-xl transition-all focus:text-tertiary active:text-tertiary inline-block capitalize"
+      class="text-white py-4 pe-9 ps-11 font-bold text-xl transition-all focus:text-tertiary active:text-tertiary inline-block capitalize w-full"
     >
       Əlaqə
     </a>

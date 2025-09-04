@@ -1,18 +1,26 @@
 ---
 import { Icon } from "astro-icon/components";
+
+interface Props {
+  text: string;
+  button: string;
+  link: string;
+}
+
+const { text, button, link }: Props = Astro.props;
 ---
 
 <section class="bg-tertiary py-12.5">
   <div class="container flex justify-between items-center flex-wrap">
     <div class="text-2xl lg:text-3xl font-bold text-primary md:w-3/5">
-      Birlikdə inkişaf etmək və ictimai sağlamlığı gücləndirmək üçün
+      {text}
     </div>
     <div>
       <a
-        href="/member-registration"
+        href={link}
         class="text-white text-base bg-primary rounded-[50px] py-4 px-6 flex items-center gap-7.5 hover:bg-secondary transition-all w-fit"
       >
-        Bizə qoşulun
+        {button}
         <Icon name="tabler:arrow-up-right" size={26} />
       </a>
     </div>

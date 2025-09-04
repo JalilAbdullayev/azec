@@ -1,0 +1,24 @@
+---
+import Heading from "../components/conference/Heading.astro";
+import Layout from "../layouts/Layout.astro";
+import Info from "../components/conference/Info.astro";
+import Program from "../components/conference/Program.astro";
+import Gallery from "../components/conference/Gallery.astro";
+import Sponsors from "../components/conference/Sponsors.astro";
+import ConferenceText from "../components/conference/ConferenceText.astro";
+import Banner from "../components/home/Banner.astro";
+---
+
+<Layout title="I Milli Endokrinologiya KONFRANSI">
+  <Heading />
+  <Info />
+  <ConferenceText />
+  <Program />
+  <Gallery />
+  <Sponsors />
+  <Banner
+    text="I Azərbaycan-Türkiyə Diabet Günləri"
+    button="Qeydiyyatdan keç"
+    link="/register"
+  />
+</Layout>

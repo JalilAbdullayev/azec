@@ -1,0 +1,45 @@
+---
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
+import Card from "../gallery/Card.astro";
+---
+
+<section class="container py-20 flex flex-col gap-11">
+  <div class="flex flex-col items-center gap-6">
+    <h2 class="text-primary text-4xl font-bold">Tədbirdən Fotolar</h2>
+    <hr class="bg-tertiary w-9 h-1.5 border-0 rounded" />
+  </div>
+  <section
+    class="container grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-1.5"
+  >
+    <Card />
+    <Card />
+    <Card />
+    <Card />
+    <Card />
+    <Card />
+  </section>
+</section>
+
+<script>
+  import { Fancybox } from "@fancyapps/ui/dist/fancybox/";
+
+  Fancybox.bind("[data-fancybox='gallery']", {
+    Carousel: {
+      Toolbar: {
+        display: {
+          left: ["counter"],
+          middle: [],
+          right: [
+            "zoomIn",
+            "zoomOut",
+            "autoplay",
+            "fullscreen",
+            "thumbs",
+            "download",
+            "close",
+          ],
+        },
+      },
+    },
+  });
+</script>

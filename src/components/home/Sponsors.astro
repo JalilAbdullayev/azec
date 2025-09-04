@@ -27,8 +27,11 @@ import "swiper/css/bundle";
 
   new Swiper("#sponsor-swiper", {
     grabCursor: true,
-    spaceBetween: 60,
+    spaceBetween: 40,
     breakpoints: {
+      1600: {
+        slidesPerView: 5,
+      },
       1200: {
         slidesPerView: 4,
       },
